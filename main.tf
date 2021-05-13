@@ -9,7 +9,7 @@ resource "aws_codedeploy_app" "default" {
 
   tags = merge(
     {
-      "Name" = local.iam_name
+      "Name" = local.tag_name
     },
     var.tags,
   )
@@ -120,7 +120,7 @@ resource "aws_iam_role" "default" {
   description        = var.description
   tags = merge(
     {
-      "Name" = local.iam_name
+      "Name" = local.tag_name
     },
     var.tags,
   )
@@ -239,6 +239,6 @@ resource "aws_iam_role_policy_attachment" "default" {
 }
 
 locals {
-  iam_name = "${var.name}-ecs-codedeploy"
+  iam_name = "${title(var.name)}${title(var.environment)}EcsCodeDeploy"
+  tag_name = "${var.name}-${var.environment}"
 }
-

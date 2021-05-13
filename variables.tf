@@ -3,6 +3,11 @@ variable "name" {
   description = "The name of the application."
 }
 
+variable "environment" {
+  type = string
+  description = "The environment the application is being deployed to."
+}
+
 variable "ecs_cluster_name" {
   type        = string
   description = "The ECS Cluster name."
