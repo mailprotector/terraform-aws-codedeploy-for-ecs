@@ -106,14 +106,6 @@ resource "aws_codedeploy_deployment_group" "default" {
       }
     }
   }
-
-  tags = merge(
-  {
-    "Name" = local.iam_name
-  },
-  var.tags,
-  )
-
 }
 
 # ECS AWS CodeDeploy IAM Role
