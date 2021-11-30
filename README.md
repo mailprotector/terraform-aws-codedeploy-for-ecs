@@ -84,6 +84,7 @@ module "codedeploy" {
 | termination_wait_time_in_minutes | The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.  | string |                          `5`                           |    no    |
 | test_traffic_route_listener_arns | List of Amazon Resource Names (ARNs) of the load balancer to route test traffic listeners.                                          |  list  |                          `[]`                          |    no    |
 | wait_time_in_minutes             | The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. | string |                          `0`                           |    no    |
+| deployment_config_name           | The name of the deployment config to use.                                                                                           | string |            `CodeDeployDefault.ECSAllAtOnce`            |    no    |
 
 ## Outputs
 

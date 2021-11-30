@@ -20,7 +20,7 @@ resource "aws_codedeploy_deployment_group" "default" {
   app_name               = aws_codedeploy_app.default.name
   deployment_group_name  = var.name
   service_role_arn       = aws_iam_role.default.arn
-  deployment_config_name = "CodeDeployDefault.ECSAllAtOnce"
+  deployment_config_name = var.deployment_config_name
   tags = merge(
     {
       "Name" = local.tag_name

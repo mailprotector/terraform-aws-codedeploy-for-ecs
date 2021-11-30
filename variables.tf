@@ -4,7 +4,7 @@ variable "name" {
 }
 
 variable "environment" {
-  type = string
+  type        = string
   description = "The environment the application is being deployed to."
 }
 
@@ -87,3 +87,8 @@ variable "tags" {
   description = "A mapping of tags to assign to all resources."
 }
 
+variable "deployment_config_name" {
+  type        = string
+  description = "The name of the deployment configuration."
+  default     = "CodeDeployDefault.ECSAllAtOnce"
+}
