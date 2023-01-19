@@ -63,11 +63,11 @@ variable "termination_wait_time_in_minutes" {
   description = "The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment."
 }
 
-variable "test_traffic_route_listener_arns" {
-  default     = []
-  type        = list(string)
-  description = "List of Amazon Resource Names (ARNs) of the load balancer to route test traffic listeners."
-}
+# variable "test_traffic_route_listener_arns" {
+#   default     = []
+#   type        = list(string)
+#   description = "List of Amazon Resource Names (ARNs) of the load balancer to route test traffic listeners."
+# }
 
 variable "iam_path" {
   default     = "/"
