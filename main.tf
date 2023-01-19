@@ -108,7 +108,7 @@ resource "aws_codedeploy_deployment_group" "default" {
       # An optional path used by a load balancer to route test traffic after an Amazon ECS deployment.
       # Validation can happen while test traffic is served during a deployment.
       dynamic "test_traffic_route" {
-        for_each = var.test_traffic_route_listener_arn ? {} : { test_traffic_route = false }
+        for_each = var.test_traffic_route_listener_arns ? {} : { test_traffic_route = false }
 
         content {
           listener_arns = var.test_traffic_route_listener_arns
